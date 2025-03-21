@@ -47,7 +47,8 @@ const styles = StyleSheet.create ({
     },
 
     skills: {
-        flexDirection: "row"
+        flexDirection: "row",
+        gap: 8
     }
 
 })
