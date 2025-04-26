@@ -14,3 +14,21 @@
 # npm install react-native-safe-area-context
 # >>   import { SafeAreaProvider } from "react-native-safe-area-context";
 
+# ====   Instalando react navigation ====
+# >>>>  obs.: As dependências têm que ser instaladas com "npx expo install" em vez de "npm install" para que fiquem compativeis com o expo
+
+# npm install @react-navigation/native
+## npx expo install react-native-safe-area-context react-native-screens
+
+# npm install @react-navigation/native-stack
+
+# npm install @react-navigation/bottom-tabs
+
+# npm install @react-navigation/material-top-tabs
+## npx expo install react-native-pager-view
+
+# npm install @react-navigation/drawer
+## npx expo install react-native-gesture-handler react-native-reanimated
+
+
+
