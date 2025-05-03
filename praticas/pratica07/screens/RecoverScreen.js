@@ -13,7 +13,7 @@ function RecoverScreen({navigation}) {
 
             <Button mode="contained">Recuperar Senha</Button>
 
-            <TouchableOpacity>
+            <TouchableOpacity onPress={()=>{navigation.goBack("Login")}}>
                 <Text style={styles.link}>Voltar para Login</Text>
             </TouchableOpacity>
             

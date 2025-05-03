@@ -9,11 +9,17 @@ function LoginScreen ({navigation}) {
             <TextInput label= "E-mail" keyboardType="email-address" autoCapitalize="none" style={styles.input}/>
             <TextInput label= "Senha" secureTextEntry style={styles.input}/>
             <Button mode="contained" style={styles.input}>Entrar</Button>
+
             <View style={styles.viewEsqueceuSenha}>
+
                 <Text>Esqueceu sua senha? </Text>
-                <TouchableOpacity >
+
+                <TouchableOpacity onPress={() => navigation.navigate("RecuperarSenha")} >
+
                     <Text style={styles.linkText}>Recuperar senha</Text>
+
                 </TouchableOpacity>
+                
             </View>
 
         </View>
