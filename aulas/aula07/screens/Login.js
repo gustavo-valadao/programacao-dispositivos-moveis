@@ -10,6 +10,7 @@ import { useForm, Controller } from 'react-hook-form'
 // Note que dessa maneira eu não preciso declarar vários estados para gerenciar os inputs através do useState.
 // handleSubmit gerencia os estados que serão enviados no envio. 
 // formState: recebe diversas informações do formulário. Vamos usar para recuperar e exibir os erros.
+//            > outros exemplos seriam "isValid, isValidating, isLoading, isReady, isSubmitted, defaultValues, etc..."
 
 
 function Login({ navigation }) {
@@ -45,10 +46,13 @@ function Login({ navigation }) {
             <HelperText
                 type="error"
                 visible={errors.email}                      // Se tem erro, exibe o helper text. "errors.email?.message" texta se o erro do email não é nulo.
+                                                            // errors.email?.message, utiliza o encadeamento opcional (optional chaining) que foi introduzido no ECMAScript 2020 (ES11). 
+                                                            // "?." é o "Operador de encadeamento opcional". Ele verifica se a propriedade email existe em errors. 
+                                                            // Se email for undefined ou null, o JavaScript não tentará acessar a propriedade message e retornará undefined em vez de lançar um erro.
             >                                               
                 {errors.email?.message}                     
             </HelperText>                                       
-
+                                                            
 
 
             <Controller
