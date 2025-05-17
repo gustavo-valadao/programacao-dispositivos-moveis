@@ -32,3 +32,16 @@
 
 
 
+# ============ exemplo de instalação de projeto
+# cd praticas
+# npx create-expo-app pratica08 --template blank
+# cd pratica08
+# npm install react-native-paper @react-navigation/native @react-navigation/native-stack react-hook-form @hookform/resolvers yup
+# npx expo install react-native-screens react-native-safe-area-context
+
+
+
+
+
+
+
