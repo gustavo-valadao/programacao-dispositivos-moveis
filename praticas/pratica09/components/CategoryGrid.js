@@ -1,0 +1,55 @@
+import { useContext } from "react";
+import { useNavigation } from "@react-navigation/native";
+import { FlatList, View } from "react-native";
+import { Button, Text } from "react-native-paper";
+
+import { StoreContext } from "../contexts/StoreContext";
+
+
+function CategoryGrid( {item} ) {
+
+    const { categories } = useContext(StoreContext);
+
+    const navigation = useNavigation();
+
+    return (
+
+        <View>
+
+            <Text variant="titleMedium">Categorias</Text>
+
+            <FlatList 
+                data={categories}
+                keyExtractor={(item, index) => `Categoria - ${index}`}
+
+                numColumns={2}
+                showsVerticalScrollIndicator={false}
+
+                renderItem={({item}) => (
+
+                    <View style={{flex: 1, marginBottom: 4}}>
+
+                        <Button
+                            mode="outlined"
+                            icon={item.icone}
+                            onPress={() => {navigation.navigate("Lojas", {categoria: item.nome})}}
+                        >
+                            {item.nome}
+                        </Button>
+
+                    </View>
+
+                )}
+
+
+            
+            
+            />
+
+
+        </View>
+
+    );
+}
+
+export default CategoryGrid;
